@@ -18,6 +18,9 @@ import com.home.services.UserService;
 
 import jakarta.servlet.http.HttpSession;
 import jakarta.validation.Valid;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+
 
 
 @Controller
@@ -25,6 +28,12 @@ public class MyControllers {
 
     @Autowired
     private UserService userService;
+
+    @GetMapping
+    public String index()
+    {
+        return "redirect:/home";
+    }
 
     @RequestMapping("/home")
     public String home(Model model)
@@ -62,6 +71,14 @@ public class MyControllers {
     public String loginPage() {
         return "login";
     }
+
+
+    // //login for redirect when login info is wrong
+    // @PostMapping("/login")
+    // public String loginPage() {
+    //     return "login";
+    // }
+
 
     //signup
     @GetMapping("/register")
