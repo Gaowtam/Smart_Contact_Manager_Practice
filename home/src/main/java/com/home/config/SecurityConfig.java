@@ -90,7 +90,7 @@ public class SecurityConfig {
             formLogin.loginPage("/login");
             formLogin.loginProcessingUrl("/authenticate");///jokhon login submit hobe ai page er moddhe jabe
             formLogin.successForwardUrl("/user/dashboard");///login succesfull hole
-            formLogin.failureForwardUrl("/login?error=true");
+            // formLogin.failureForwardUrl("/login?error=true");
 
             formLogin.usernameParameter("email");//username
             formLogin.passwordParameter("password");//password

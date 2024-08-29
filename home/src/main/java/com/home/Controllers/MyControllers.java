@@ -29,7 +29,7 @@ public class MyControllers {
     @Autowired
     private UserService userService;
 
-    @GetMapping
+    @GetMapping("/")
     public String index()
     {
         return "redirect:/home";
