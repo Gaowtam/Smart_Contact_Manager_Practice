@@ -12,5 +12,7 @@ public interface UserService {
     // boolean isUserExitByEmail(String email);//UserName
     // List<User>getAlUsers();
 
+    User getUserByEmail(String email);
+
     //add more methods here related user service[logic]
 }
