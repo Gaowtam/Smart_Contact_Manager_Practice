@@ -52,4 +52,13 @@ public class UserServiceImpl implements UserService{
         return userRepo.save(user);
     }
 
+<<<<<<< HEAD
+
+    @Override
+    public User getUserByEmail(String email) {
+        // return userRepo.findByEmail(email).orElseThrow(()->new ResourceNotFoundException("User not found"));
+        return userRepo.findByEmail(email).orElse(null);
+    }
+=======
+>>>>>>> parent of bfac605 (update)
 }
